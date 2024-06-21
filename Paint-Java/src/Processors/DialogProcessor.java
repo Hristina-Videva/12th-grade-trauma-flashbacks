@@ -107,5 +107,9 @@ public class DialogProcessor {
     public void setLastPoint(Point lastPoint) {
         this.lastPoint = lastPoint;
     }
+
+    public ArrayList<Shape> getShapesList() {
+        return shapesList;
+    }
     //endregion
 }

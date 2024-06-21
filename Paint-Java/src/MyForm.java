@@ -120,7 +120,11 @@ public class MyForm extends JFrame{
 
 
     public void Invalidate(){
-        drawArea.paint(drawArea.getGraphics());
-        dialogProcessor.DrawShapes(drawArea.getGraphics());
+        DrawingPanel drawingPanel = (DrawingPanel)drawArea;
+        drawingPanel.setShapes(dialogProcessor.getShapesList());
+        drawingPanel.repaint(0, 0, drawingPanel.getWidth(), drawingPanel.getHeight());
     }
+
+    private void createUIComponents() {
+        drawArea = new DrawingPanel();    }
 }
