@@ -51,8 +51,17 @@ public class MyForm extends JFrame{
         DrawingApp.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
+                System.out.println(e.getKeyChar());
                 if(e.getKeyChar() == 'r'){
                     dialogProcessor.AddRectangle();
+                    Invalidate();
+                }
+                if(e.getKeyChar() == 's'){
+                    dialogProcessor.AddSquare();
+                    Invalidate();
+                }
+                if(e.getKeyChar() == 'c'){
+                    dialogProcessor.AddCircle();
                     Invalidate();
                 }
             }
@@ -102,11 +111,11 @@ public class MyForm extends JFrame{
                 }
             }
         });
-
+        DrawingApp.setFocusable(true);
+        DrawingApp.requestFocusInWindow();
         this.add(DrawingApp);
         this.setVisible(true);
-
-
+        DrawingApp.requestFocusInWindow();
     }
 
 

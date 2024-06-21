@@ -5,7 +5,10 @@
     <constraints>
       <xy x="20" y="26" width="2004" height="2043"/>
     </constraints>
-    <properties/>
+    <properties>
+      <focusable value="true"/>
+      <maximumSize width="3000" height="3000"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="6a330" class="javax.swing.JButton" binding="rectButton">
