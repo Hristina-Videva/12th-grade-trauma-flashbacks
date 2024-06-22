@@ -51,7 +51,6 @@ public class MyForm extends JFrame{
         DrawingApp.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
-                System.out.println(e.getKeyChar());
                 if(e.getKeyChar() == 'r'){
                     dialogProcessor.AddRectangle();
                     Invalidate();
